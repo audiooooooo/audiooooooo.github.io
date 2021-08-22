@@ -5,10 +5,6 @@
     <link>https://onceihadacat.com/audiences/</link>
     <description>Recent content in Audiences on once I had a 🐈</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://onceihadacat.com/audiences/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://onceihadacat.com/audiences/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
