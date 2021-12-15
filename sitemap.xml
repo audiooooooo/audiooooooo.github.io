@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://onceihadacat.com/packs/</loc>
+    <lastmod>2021-12-14T19:44:20+01:00</lastmod>
+  </url><url>
     <loc>https://onceihadacat.com/thoughts/</loc>
     <lastmod>2020-07-23T20:39:08+02:00</lastmod>
   </url><url>
     <loc>https://onceihadacat.com/thoughts/getting-to-know-the-digitone/</loc>
     <lastmod>2021-08-22T11:32:38+02:00</lastmod>
+  </url><url>
+    <loc>https://onceihadacat.com/</loc>
+    <lastmod>2021-12-14T19:44:20+01:00</lastmod>
   </url><url>
     <loc>https://onceihadacat.com/thoughts/trying-soundb0ard/</loc>
     <lastmod>2020-07-23T20:39:08+02:00</lastmod>
@@ -26,6 +32,9 @@
     <loc>https://onceihadacat.com/thoughts/minilogue-xd-omnisphere-patches-part-1/</loc>
     <lastmod>2020-07-23T20:39:08+02:00</lastmod>
   </url><url>
+    <loc>https://onceihadacat.com/packs/bastl-kastl-waschtl/</loc>
+    <lastmod>2021-12-14T19:44:20+01:00</lastmod>
+  </url><url>
     <loc>https://onceihadacat.com/thoughts/minilogue-xd-effects-section/</loc>
     <lastmod>2020-07-23T20:39:08+02:00</lastmod>
   </url><url>
@@ -40,8 +49,5 @@
     <loc>https://onceihadacat.com/concentrations/</loc>
   </url><url>
     <loc>https://onceihadacat.com/languages/</loc>
-  </url><url>
-    <loc>https://onceihadacat.com/</loc>
-    <lastmod>2020-07-23T20:39:08+02:00</lastmod>
   </url>
 </urlset>

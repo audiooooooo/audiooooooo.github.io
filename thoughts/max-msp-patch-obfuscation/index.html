@@ -29,7 +29,7 @@
   
 
   
-  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.96164050bd9f7731206c9c12efa3b8efc28c5d9d66a852872c613633837efa8a.css">
+  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.0cae6c50d850ee67a8849666931952ab956873d1f7f9aa71a3cb39ed1c36273b.css">
   <link rel="canonical" href="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -52,6 +52,17 @@
     </figure>
   </div>
 </div>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-brand">
+      <a class="navbar-item center" href="/thoughts">
+        THOUGHTS 🌱
+      </a>
+      <a class="navbar-item center" href="/packs">
+        SOUNDS & PACKS 🔉
+      </a>
+
+  </div>
+</nav>
   </header>
 
   <div id="main" class="oihac-main">
@@ -70,7 +81,7 @@
 
 
 <li>
-  <a href="https://onceihadacat.com/">once i had a cat</a>
+  <a href="https://onceihadacat.com/">once I had a cat</a>
 </li>
 
 
@@ -142,7 +153,7 @@
 <p>When I searched the holy web for information about this, I found <a href="https://cycling74.com/forums/stand-alone-copy-protection">this old thread in the Cycling74 forum</a> and I saw that there is this obfuscation method of sending every object a re-positioning message.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -152,15 +163,14 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">eachobj</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">maxclass</span> <span class="o">!=</span> <span class="s2">&#34;patcher&#34;</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">x</span><span class="p">.</span><span class="nx">message</span><span class="p">(</span><span class="s2">&#34;sendbox&#34;</span><span class="p">,</span><span class="s2">&#34;patching_position&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
     <span class="p">}</span>            
     <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Oh man.</p>
@@ -181,7 +191,7 @@
 <p>One possible helper and starting point could be the above mentioned <a href="https://docs.cycling74.com/max8/vignettes/jspatcherobject">patcher object</a>. Instead of putting all objects together we can spread them some randomly over the canvas.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -191,15 +201,14 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">eachobj</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">x_pos</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">y_pos</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">800</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
     <span class="nx">x</span><span class="p">.</span><span class="nx">message</span><span class="p">(</span><span class="s2">&#34;sendbox&#34;</span><span class="p">,</span><span class="s2">&#34;patching_rect&#34;</span><span class="p">,</span><span class="nx">x_pos</span><span class="p">,</span> <span class="nx">y_pos</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
     <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>In this case we resize all objects to width <code>190</code> and height <code>30</code> and place them on the canvas with <code>x</code> position beween <code>1</code> and <code>1000</code> and <code>y</code> position between <code>1</code> and <code>800</code>.</p>
@@ -228,9 +237,7 @@
 
   <footer>
     <footer class="has-text-centered">
-<pre>
-    /ᐠ｡‸｡ᐟ\
-</pre>
+<img src="/cat.gif">
 </footer>
   </footer>
 

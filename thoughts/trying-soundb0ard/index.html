@@ -29,7 +29,7 @@
   
 
   
-  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.96164050bd9f7731206c9c12efa3b8efc28c5d9d66a852872c613633837efa8a.css">
+  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.0cae6c50d850ee67a8849666931952ab956873d1f7f9aa71a3cb39ed1c36273b.css">
   <link rel="canonical" href="https://onceihadacat.com/thoughts/trying-soundb0ard/">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -52,6 +52,17 @@
     </figure>
   </div>
 </div>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-brand">
+      <a class="navbar-item center" href="/thoughts">
+        THOUGHTS 🌱
+      </a>
+      <a class="navbar-item center" href="/packs">
+        SOUNDS & PACKS 🔉
+      </a>
+
+  </div>
+</nav>
   </header>
 
   <div id="main" class="oihac-main">
@@ -70,7 +81,7 @@
 
 
 <li>
-  <a href="https://onceihadacat.com/">once i had a cat</a>
+  <a href="https://onceihadacat.com/">once I had a cat</a>
 </li>
 
 
@@ -169,12 +180,12 @@
 <p>Clone Link from <a href="https://github.com/ableton/link">https://github.com/ableton/link</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone git@github.com:Ableton/link.git
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone git@github.com:Ableton/link.git
 <span class="nb">cd</span> link
 git submodule update --init --recursive</code></pre></td></tr></table>
 </div>
@@ -190,7 +201,7 @@ git submodule update --init --recursive</code></pre></td></tr></table>
 <p>There are some path settings which needs to be changed in the <code>Makefile</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -210,7 +221,7 @@ git submodule update --init --recursive</code></pre></td></tr></table>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-make" data-lang="make"><span class="nv">ABLETONASIOINCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/link/modules/asio-standalone/asio/include
+<pre tabindex="0" class="chroma"><code class="language-make" data-lang="make"><span class="nv">ABLETONASIOINCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/link/modules/asio-standalone/asio/include
 <span class="nv">READLINEINCDIR</span><span class="o">=</span>/usr/local/Cellar/readline/8.0.1/include
 <span class="nv">RANGE3INCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/range-v3/include
 <span class="nv">HOMEBREWINCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/homebrew/include
@@ -234,7 +245,7 @@ git submodule update --init --recursive</code></pre></td></tr></table>
 <p>These are of course specific to my current system.</p>
 <h2 id="make-it">make it</h2>
 <p>&hellip;and then a simple <code>make</code> is enough to build the application.</p>
-<pre><code>$ make
+<pre tabindex="0"><code>$ make
 $ Boom! make some noise...
 </code></pre><p>Good point. Lets try it out.</p>
 <h1 id="how-to-play-with-it">How to play with it</h1>
@@ -260,11 +271,11 @@ $ Boom! make some noise...
 <h2 id="looping-a-sample">Looping a sample</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VEH4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VEH4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">);</span>
 <span class="n">set</span> <span class="nl">l1</span><span class="p">:</span><span class="n">len</span> <span class="mi">4</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -272,40 +283,40 @@ $ Boom! make some noise...
 <h2 id="setting-bpm">Setting BPM</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">bpm</span> <span class="mi">128</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">bpm</span> <span class="mi">128</span></code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="loading-and-playing-a-sample">Loading and playing a sample</h2>
 <p>Trying to play a simple kick.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">);</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">);</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Play it using a <em>pattern</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;s1 s1 s1 s1&#34;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;s1 s1 s1 s1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>it seems that you can have up to <code>99</code> pattern (<code>p1</code> - <code>p99</code>).</p>
 <h2 id="adding-effects-to-a-loop">Adding effects to a loop</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
 <span class="n">addFx</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s">&#34;reverb&#34;</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -324,12 +335,12 @@ $ Boom! make some noise...
 <p><code>sidechain</code> requires a second argument, which defines the trigger signal used for sidechaining (What is sidechaing? See this <a href="https://www.ableton.com/en/blog/sidechain-compression-part-1/">nice article by Ableton</a>). For example a kick:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
 <span class="n">let</span> <span class="n">k1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">)</span>
 <span class="n">addFx</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s">&#34;sidechain&#34;</span><span class="p">,</span> <span class="n">k1</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
@@ -338,11 +349,11 @@ $ Boom! make some noise...
 <p>You can set the volume to a track with a value range of <code>[0.0, 1.0]</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
 <span class="n">vol</span> <span class="n">l1</span> <span class="mf">0.4</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -373,12 +384,12 @@ $ Boom! make some noise...
 <p>There is this minisynth included callled <code>moog</code>. And there are a bunch of presets already included in the file <a href="https://github.com/sideb0ard/SoundB0ard/blob/master/settings/moogpresets.dat">moogpresets.dat</a> which can be loaded using <code>loadPreset</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
 <span class="n">loadPreset</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="s">&#34;pacman&#34;</span><span class="p">)</span>
 <span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;m1 m1 m1&#34;</span></code></pre></td></tr></table>
 </div>
@@ -394,12 +405,12 @@ $ Boom! make some noise...
 <p>with <code>#</code> instead of <code>$</code> you can send MIDI notes to the device:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">mo</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">mo</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
 <span class="n">loadPreset</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&#34;remotev&#34;</span><span class="p">)</span>
 <span class="n">p1</span> <span class="err">#</span> <span class="s">&#34;c3 d4 c3 a3&#34;</span> <span class="n">mo</span></code></pre></td></tr></table>
 </div>
@@ -408,11 +419,11 @@ $ Boom! make some noise...
 <p>This is currently the most confusing part on my side.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">k1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">k1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">)</span>
 <span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;k1 k1 k1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -437,9 +448,7 @@ $ Boom! make some noise...
 
   <footer>
     <footer class="has-text-centered">
-<pre>
-    /ᐠ｡‸｡ᐟ\
-</pre>
+<img src="/cat.gif">
 </footer>
   </footer>
 

@@ -1,16 +1,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>once i had a cat on once I had a cat</title>
+    <title>once I had a cat</title>
     <link>https://onceihadacat.com/</link>
-    <description>Recent content in once i had a cat on once I had a cat</description>
+    <description>Recent content on once I had a cat</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Fri, 01 Jan 1993 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jan 2000 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="https://onceihadacat.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    
+    <item>
+      <title>my little sounds &amp; packs</title>
+      <link>https://onceihadacat.com/packs/</link>
+      <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
+      
+      <guid>https://onceihadacat.com/packs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>thoughts</title>
