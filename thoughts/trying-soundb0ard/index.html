@@ -1,323 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html><html lang=en>
 <head>
-  <meta charset="utf-8">
-  <title>making music in the shell -- with Soundb0ard // once i had a cat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  
-  <meta name="keywords" content="soundb0ard, live coding">
-  
-  <meta property="og:title" content="making music in the shell -- with Soundb0ard">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://onceihadacat.com/thoughts/trying-soundb0ard/">
-  <meta property="og:description" content="">
-  <meta property="og:site_name" content="once I had a cat">
-  <meta name="msvalidate.01" content="B0A4A9FBBDCFEB257EB993160FA09FBF" />
-  <meta name="google-site-verification" content="REgG4I-DhlS9raB6978SUzzOILfVU4j2HcReGanV0jM" />
-  
-  
-  <meta property="og:image" content="https://onceihadacat.com/thoughts/trying-soundb0ard/soundb0ard-header.jpg">
-  
-  
-  <meta name="twitter:site" content="@onceihadacat">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-
-  <link rel="alternate" type="application/rss&#43;xml" href="https://onceihadacat.com/index.xml">
-  
-
-  
-  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.98d9464674543695799f7b3e42799af7501fbb9676c7a31d8e120b09808df08d.css">
-  <link rel="canonical" href="https://onceihadacat.com/thoughts/trying-soundb0ard/">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-
+<meta charset=utf-8>
+<title>making music in the shell -- with Soundb0ard // once i had a cat</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content>
+<meta name=keywords content="soundb0ard,live coding">
+<meta property="og:title" content="making music in the shell -- with Soundb0ard">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://onceihadacat.com/thoughts/trying-soundb0ard/">
+<meta property="og:description" content>
+<meta property="og:site_name" content="once I had a cat">
+<meta name=msvalidate.01 content="B0A4A9FBBDCFEB257EB993160FA09FBF">
+<meta name=google-site-verification content="REgG4I-DhlS9raB6978SUzzOILfVU4j2HcReGanV0jM">
+<meta property="og:image" content="https://onceihadacat.com/thoughts/trying-soundb0ard/soundb0ard-header.jpg">
+<meta name=twitter:site content="@onceihadacat">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css>
+<link rel=alternate type=application/rss+xml href=https://onceihadacat.com/index.xml>
+<link rel=stylesheet href=https://onceihadacat.com/css/main.min.98d9464674543695799f7b3e42799af7501fbb9676c7a31d8e120b09808df08d.css>
+<link rel=canonical href=https://onceihadacat.com/thoughts/trying-soundb0ard/>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
 </head>
-
 <body>
-
-  <header>
-    <div class="columns is-centered">
-  <div class="column is-half has-text-centered mt-4">
-    <figure class="image is-128x128 is-inline-block">
-      <a href="/"><img class="is-rounded" src="/oihac.png" alt="Picture of a smooth cat" title="Once I had a cat"></a>
-    </figure>
-  </div>
+<header>
+<div class="columns is-centered">
+<div class="column is-half has-text-centered mt-4">
+<figure class="image is-128x128 is-inline-block">
+<a href=/><img class=is-rounded src=/oihac.png alt="Picture of a smooth cat" title="Once I had a cat"></a>
+</figure>
 </div>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div id="navbarBasicExample" class="navbar-brand">
-      <a class="navbar-item center" href="/thoughts">
-        THOUGHTS 🌱
+</div>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div id=navbarBasicExample class=navbar-brand>
+<a class="navbar-item center" href=/thoughts>
+THOUGHTS 🌱
+</a>
+<a class="navbar-item center" href=/packs>
+SOUNDS & PACKS 🔉
       </a>
-      <a class="navbar-item center" href="/packs">
-        SOUNDS & PACKS 🔉
-      </a>
-
-  </div>
+</div>
 </nav>
-  </header>
-
-  <div id="main" class="oihac-main">
-    <div class="container is-fluid">
-      
+</header>
+<div id=main class=oihac-main>
+<div class="container is-fluid">
 <section>
-  <div class="container">
-    <div class="top-breadcrumb">
-  <nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
-    <ul>
-      
-
-
-
-
-
-
+<div class=container>
+<div class=top-breadcrumb>
+<nav class="breadcrumb has-bullet-separator is-centered" aria-label=breadcrumbs>
+<ul>
 <li>
-  <a href="https://onceihadacat.com/">once I had a cat</a>
+<a href=https://onceihadacat.com/>once I had a cat</a>
 </li>
-
-
-
-
 <li>
-  <a href="https://onceihadacat.com/thoughts/">thoughts</a>
+<a href=https://onceihadacat.com/thoughts/>thoughts</a>
 </li>
-
-
-
-
-<li class="is-active">
-  <a href="#" aria-current="page">making music in the shell -- with Soundb0ard</a>
+<li class=is-active>
+<a href=# aria-current=page>making music in the shell -- with Soundb0ard</a>
 </li>
-
-
-    </ul>
-  </nav>
-</div>
-
-    <div class="columns">
-      <div class="column is-one-third">
-        <div class='article-sidebar'>
-
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#building-and-running-soundb0ard">Building and running Soundb0ard</a>
-      <ul>
-        <li><a href="#first-clone">First clone</a></li>
-        <li><a href="#install-some-libraries">Install some libraries</a></li>
-        <li><a href="#update-the-makefile">Update the Makefile</a></li>
-        <li><a href="#make-it">make it</a></li>
-      </ul>
-    </li>
-    <li><a href="#how-to-play-with-it">How to play with it</a>
-      <ul>
-        <li><a href="#keyboard-shortcuts">keyboard shortcuts</a></li>
-        <li><a href="#shell-commands">shell commands</a></li>
-        <li><a href="#looping-a-sample">Looping a sample</a></li>
-        <li><a href="#setting-bpm">Setting BPM</a></li>
-        <li><a href="#loading-and-playing-a-sample">Loading and playing a sample</a></li>
-        <li><a href="#adding-effects-to-a-loop">Adding effects to a loop</a></li>
-        <li><a href="#set-volume-of-a-track">Set volume of a track</a></li>
-        <li><a href="#modify-the-looper-loops">Modify the looper loops</a></li>
-        <li><a href="#the-moog-minisynth">The Moog MiniSynth</a></li>
-        <li><a href="#pattern">Pattern</a></li>
-      </ul>
-    </li>
-  </ul>
+</ul>
 </nav>
-
 </div>
-
-      </div>
-      <div class="column">
-        <div id="article-body" class="col-sm-9 col-sm-push-3 doc">
-          <h1 itemprop="headline" class="has-text-centered is-size-2-mobile">making music in the shell -- with Soundb0ard</h1>
-
-
-          <p>Damn. What a rabbit hole! Live Coding. I&rsquo;ve never been into this too much in the past, but currently I have read
-<a href="https://cycling74.com/articles/an-interview-with-thorsten-sideboard-algorithmic-art-assembly">this nice interview from Cycling74 with Thorsten Sideboard</a>.</p>
-<p>&hellip;and then I stumbled across <a href="https://www.youtube.com/watch?v=wNFlijArs2g">this video</a> of him. Hell yes, what a cool dude!</p>
-<p><img src="thorsten-performance.png" alt="Live performance from Thorsten Sideboard"></p>
-<p>&hellip;and an awesome performance with his handcrafted live coding platform <a href="https://github.com/sideb0ard/SoundB0ard">Soundb0ard</a>. A treasure and all open-source. 🔥</p>
+<div class=columns>
+<div class="column is-one-third">
+<div class=article-sidebar>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#building-and-running-soundb0ard>Building and running Soundb0ard</a>
+<ul>
+<li><a href=#first-clone>First clone</a></li>
+<li><a href=#install-some-libraries>Install some libraries</a></li>
+<li><a href=#update-the-makefile>Update the Makefile</a></li>
+<li><a href=#make-it>make it</a></li>
+</ul>
+</li>
+<li><a href=#how-to-play-with-it>How to play with it</a>
+<ul>
+<li><a href=#keyboard-shortcuts>keyboard shortcuts</a></li>
+<li><a href=#shell-commands>shell commands</a></li>
+<li><a href=#looping-a-sample>Looping a sample</a></li>
+<li><a href=#setting-bpm>Setting BPM</a></li>
+<li><a href=#loading-and-playing-a-sample>Loading and playing a sample</a></li>
+<li><a href=#adding-effects-to-a-loop>Adding effects to a loop</a></li>
+<li><a href=#set-volume-of-a-track>Set volume of a track</a></li>
+<li><a href=#modify-the-looper-loops>Modify the looper loops</a></li>
+<li><a href=#the-moog-minisynth>The Moog MiniSynth</a></li>
+<li><a href=#pattern>Pattern</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class=column>
+<div id=article-body class="col-sm-9 col-sm-push-3 doc">
+<h1 itemprop=headline class="has-text-centered is-size-2-mobile">making music in the shell -- with Soundb0ard</h1>
+<p>Damn. What a rabbit hole! Live Coding. I&rsquo;ve never been into this too much in the past, but currently I have read
+<a href=https://cycling74.com/articles/an-interview-with-thorsten-sideboard-algorithmic-art-assembly>this nice interview from Cycling74 with Thorsten Sideboard</a>.</p>
+<p>&mldr;and then I stumbled across <a href="https://www.youtube.com/watch?v=wNFlijArs2g">this video</a> of him. Hell yes, what a cool dude!</p>
+<p><img src=thorsten-performance.png alt="Live performance from Thorsten Sideboard"></p>
+<p>&mldr;and an awesome performance with his handcrafted live coding platform <a href=https://github.com/sideb0ard/SoundB0ard>Soundb0ard</a>. A treasure and all open-source. 🔥</p>
 <p>I wanted to try it out immediately. Here are my steps.</p>
-<h1 id="building-and-running-soundb0ard">Building and running Soundb0ard</h1>
-<h2 id="first-clone">First clone</h2>
+<h1 id=building-and-running-soundb0ard>Building and running Soundb0ard</h1>
+<h2 id=first-clone>First clone</h2>
 <p><code>git clone git@github.com:sideb0ard/SoundB0ard.git</code></p>
 <p>My steps on my Mac OS system were:</p>
-<h2 id="install-some-libraries">Install some libraries</h2>
-<h3 id="portaudio">PortAudio</h3>
-<p><a href="http://www.portaudio.com/download.html">http://www.portaudio.com/download.html</a></p>
-<p><code>./configure --disable-mac-universal &amp;&amp; make</code></p>
+<h2 id=install-some-libraries>Install some libraries</h2>
+<h3 id=portaudio>PortAudio</h3>
+<p><a href=http://www.portaudio.com/download.html>http://www.portaudio.com/download.html</a></p>
+<p><code>./configure --disable-mac-universal && make</code></p>
 <p><code>make install</code></p>
 <p>This is the only library I installed without using brew. I thought this would be fun, but brew is so much less pain:</p>
 <p><code>brew install portaudio</code></p>
-<h3 id="portmidi">PortMidi</h3>
-<p><a href="http://portmedia.sourceforge.net/portmidi/">http://portmedia.sourceforge.net/portmidi/</a></p>
+<h3 id=portmidi>PortMidi</h3>
+<p><a href=http://portmedia.sourceforge.net/portmidi/>http://portmedia.sourceforge.net/portmidi/</a></p>
 <p><code>brew install portmidi</code></p>
-<h3 id="libsndfile">libsndfile</h3>
-<p><a href="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</a></p>
+<h3 id=libsndfile>libsndfile</h3>
+<p><a href=http://www.mega-nerd.com/libsndfile/>http://www.mega-nerd.com/libsndfile/</a></p>
 <p><code>brew install libsndfile</code></p>
-<h3 id="ctags">ctags</h3>
-<p><a href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</a></p>
+<h3 id=ctags>ctags</h3>
+<p><a href=http://ctags.sourceforge.net/>http://ctags.sourceforge.net/</a></p>
 <p><code>brew install ctags</code></p>
-<h3 id="cscope">cscope</h3>
-<p><a href="http://cscope.sourceforge.net/">http://cscope.sourceforge.net/</a></p>
+<h3 id=cscope>cscope</h3>
+<p><a href=http://cscope.sourceforge.net/>http://cscope.sourceforge.net/</a></p>
 <p><code>brew install cscope</code></p>
-<h3 id="liblo">liblo</h3>
-<p><a href="http://liblo.sourceforge.net/">http://liblo.sourceforge.net/</a></p>
+<h3 id=liblo>liblo</h3>
+<p><a href=http://liblo.sourceforge.net/>http://liblo.sourceforge.net/</a></p>
 <p><code>brew install liblo</code></p>
-<h3 id="readline">readline</h3>
+<h3 id=readline>readline</h3>
 <p><code>brew install readline</code></p>
-<h3 id="ableton-link">Ableton Link</h3>
-<p>Clone Link from <a href="https://github.com/ableton/link">https://github.com/ableton/link</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<h3 id=ableton-link>Ableton Link</h3>
+<p>Clone Link from <a href=https://github.com/ableton/link>https://github.com/ableton/link</a></p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone git@github.com:Ableton/link.git
-<span class="nb">cd</span> link
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git clone git@github.com:Ableton/link.git
+<span class=nb>cd</span> link
 git submodule update --init --recursive</code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="range-v3">Range-v3</h3>
-<p><a href="https://github.com/ericniebler/range-v3">https://github.com/ericniebler/range-v3</a></p>
-<h3 id="googletest">Googletest</h3>
-<p><a href="https://github.com/google/googletest">https://github.com/google/googletest</a></p>
-<h3 id="google-performance-tools">Google Performance Tools</h3>
-<p><a href="https://github.com/gperftools/gperftools">https://github.com/gperftools/gperftools</a></p>
+<h3 id=range-v3>Range-v3</h3>
+<p><a href=https://github.com/ericniebler/range-v3>https://github.com/ericniebler/range-v3</a></p>
+<h3 id=googletest>Googletest</h3>
+<p><a href=https://github.com/google/googletest>https://github.com/google/googletest</a></p>
+<h3 id=google-performance-tools>Google Performance Tools</h3>
+<p><a href=https://github.com/gperftools/gperftools>https://github.com/gperftools/gperftools</a></p>
 <p><code>brew install gperftools</code></p>
-<h2 id="update-the-makefile">Update the Makefile</h2>
+<h2 id=update-the-makefile>Update the Makefile</h2>
 <p>There are some path settings which needs to be changed in the <code>Makefile</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-make" data-lang="make"><span class="nv">ABLETONASIOINCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/link/modules/asio-standalone/asio/include
-<span class="nv">READLINEINCDIR</span><span class="o">=</span>/usr/local/Cellar/readline/8.0.1/include
-<span class="nv">RANGE3INCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/range-v3/include
-<span class="nv">HOMEBREWINCDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/homebrew/include
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-make data-lang=make><span class=nv>ABLETONASIOINCDIR</span><span class=o>=</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/CODE/LIBS/link/modules/asio-standalone/asio/include
+<span class=nv>READLINEINCDIR</span><span class=o>=</span>/usr/local/Cellar/readline/8.0.1/include
+<span class=nv>RANGE3INCDIR</span><span class=o>=</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/CODE/LIBS/range-v3/include
+<span class=nv>HOMEBREWINCDIR</span><span class=o>=</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/homebrew/include
 
-<span class="nv">GTEST_DIR</span> <span class="o">=</span>  <span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/googletest/googletest
-<span class="nv">INCDIRS</span><span class="o">=</span>-I/usr/local/include <span class="se">\
-</span><span class="se"></span>		-Iinclude <span class="se">\
-</span><span class="se"></span>		-I<span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/CODE/LIBS/link/include <span class="se">\
-</span><span class="se"></span>		-I<span class="si">${</span><span class="nv">HOMEBREWINCDIR</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>		-I<span class="si">${</span><span class="nv">RANGE3INCDIR</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>		-I<span class="si">${</span><span class="nv">ABLETONASIOINCDIR</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>		-I<span class="si">${</span><span class="nv">READLINEINCDIR</span><span class="si">}</span>
+<span class=nv>GTEST_DIR</span> <span class=o>=</span>  <span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/CODE/LIBS/googletest/googletest
+<span class=nv>INCDIRS</span><span class=o>=</span>-I/usr/local/include <span class=se>\
+</span><span class=se></span>		-Iinclude <span class=se>\
+</span><span class=se></span>		-I<span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/CODE/LIBS/link/include <span class=se>\
+</span><span class=se></span>		-I<span class=si>${</span><span class=nv>HOMEBREWINCDIR</span><span class=si>}</span> <span class=se>\
+</span><span class=se></span>		-I<span class=si>${</span><span class=nv>RANGE3INCDIR</span><span class=si>}</span> <span class=se>\
+</span><span class=se></span>		-I<span class=si>${</span><span class=nv>ABLETONASIOINCDIR</span><span class=si>}</span> <span class=se>\
+</span><span class=se></span>		-I<span class=si>${</span><span class=nv>READLINEINCDIR</span><span class=si>}</span>
 
-<span class="nv">HOMEBREWLIBDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/homebrew/lib
-<span class="nv">READLINELIBDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/homebrew/opt/readline/lib
+<span class=nv>HOMEBREWLIBDIR</span><span class=o>=</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/homebrew/lib
+<span class=nv>READLINELIBDIR</span><span class=o>=</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span>/homebrew/opt/readline/lib
 
-<span class="nv">LIBDIRS</span><span class="o">=</span>-L/usr/local/lib -L<span class="si">${</span><span class="nv">HOMEBREWLIBDIR</span><span class="si">}</span> -L<span class="si">${</span><span class="nv">READLINELIBDIR</span><span class="si">}</span>
+<span class=nv>LIBDIRS</span><span class=o>=</span>-L/usr/local/lib -L<span class=si>${</span><span class=nv>HOMEBREWLIBDIR</span><span class=si>}</span> -L<span class=si>${</span><span class=nv>READLINELIBDIR</span><span class=si>}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
 <p>These are of course specific to my current system.</p>
-<h2 id="make-it">make it</h2>
-<p>&hellip;and then a simple <code>make</code> is enough to build the application.</p>
-<pre tabindex="0"><code>$ make
+<h2 id=make-it>make it</h2>
+<p>&mldr;and then a simple <code>make</code> is enough to build the application.</p>
+<pre tabindex=0><code>$ make
 $ Boom! make some noise...
 </code></pre><p>Good point. Lets try it out.</p>
-<h1 id="how-to-play-with-it">How to play with it</h1>
+<h1 id=how-to-play-with-it>How to play with it</h1>
 <p>You can start the shell by running <code>./sbsh</code> from the command line and you are presented a nice colorful intro screen:</p>
-<p><img src="soundb0ard-1.png" alt="Soundb0ard startup screen"></p>
+<p><img src=soundb0ard-1.png alt="Soundb0ard startup screen"></p>
 <p>I want to collect some infos about the commands and keyboard shortcuts. I haven&rsquo;t found a full documentation yet, but try to figure some stuff by playing around.</p>
 <p><strong>WORK IN PROGRESS</strong></p>
-<h2 id="keyboard-shortcuts">keyboard shortcuts</h2>
+<h2 id=keyboard-shortcuts>keyboard shortcuts</h2>
 <ul>
 <li>
-<kbd class="kbd">
-    control
-</kbd> + 
-<kbd class="kbd">
-    D
+<kbd class=kbd>
+control
+</kbd> +
+<kbd class=kbd>
+D
 </kbd> : Exit soundb0ard shell</li>
 </ul>
-<h2 id="shell-commands">shell commands</h2>
+<h2 id=shell-commands>shell commands</h2>
 <ul>
 <li><code>ps</code> : show running processes with instruments and algorithms</li>
 <li><code>ls</code> : list samples in <code>wavs/</code> folder</li>
 </ul>
-<h2 id="looping-a-sample">Looping a sample</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<h2 id=looping-a-sample>Looping a sample</h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VEH4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">);</span>
-<span class="n">set</span> <span class="nl">l1</span><span class="p">:</span><span class="n">len</span> <span class="mi">4</span><span class="p">;</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>l1</span> <span class=o>=</span> <span class=n>loop</span><span class=p>(</span><span class=n>loops</span><span class=o>/</span><span class=n>VEH4</span><span class=o>-</span><span class=mf>24.</span><span class=n>wav</span><span class=p>);</span>
+<span class=n>set</span> <span class=nl>l1</span><span class=p>:</span><span class=n>len</span> <span class=mi>4</span><span class=p>;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p><code>VEH4-24.wav</code> is in this case a wav file I put into the <code>wavs/loops/</code> folder.</p>
-<h2 id="setting-bpm">Setting BPM</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<h2 id=setting-bpm>Setting BPM</h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">bpm</span> <span class="mi">128</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>bpm</span> <span class=mi>128</span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="loading-and-playing-a-sample">Loading and playing a sample</h2>
+<h2 id=loading-and-playing-a-sample>Loading and playing a sample</h2>
 <p>Trying to play a simple kick.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">);</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>s1</span> <span class=o>=</span> <span class=n>sample</span><span class=p>(</span><span class=n>kicks</span><span class=o>/</span><span class=n>kick8</span><span class=p>.</span><span class=n>aif</span><span class=p>);</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Play it using a <em>pattern</em></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;s1 s1 s1 s1&#34;</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>p1</span> <span class=err>$</span> <span class=s>&#34;s1 s1 s1 s1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>it seems that you can have up to <code>99</code> pattern (<code>p1</code> - <code>p99</code>).</p>
-<h2 id="adding-effects-to-a-loop">Adding effects to a loop</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<h2 id=adding-effects-to-a-loop>Adding effects to a loop</h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
-<span class="n">addFx</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s">&#34;reverb&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>l1</span> <span class=o>=</span> <span class=n>loop</span><span class=p>(</span><span class=n>loops</span><span class=o>/</span><span class=n>VE4</span><span class=o>-</span><span class=mf>24.</span><span class=n>wav</span><span class=p>)</span>
+<span class=n>addFx</span><span class=p>(</span><span class=n>l1</span><span class=p>,</span> <span class=s>&#34;reverb&#34;</span><span class=p>)</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>With <code>addFx</code> you can add couple of effects:</p>
@@ -332,32 +289,32 @@ $ Boom! make some noise...
 <li><code>modfilter</code></li>
 <li><code>waveshape</code></li>
 </ul>
-<p><code>sidechain</code> requires a second argument, which defines the trigger signal used for sidechaining (What is sidechaing? See this <a href="https://www.ableton.com/en/blog/sidechain-compression-part-1/">nice article by Ableton</a>). For example a kick:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<p><code>sidechain</code> requires a second argument, which defines the trigger signal used for sidechaining (What is sidechaing? See this <a href=https://www.ableton.com/en/blog/sidechain-compression-part-1/>nice article by Ableton</a>). For example a kick:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
-<span class="n">let</span> <span class="n">k1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">)</span>
-<span class="n">addFx</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s">&#34;sidechain&#34;</span><span class="p">,</span> <span class="n">k1</span><span class="p">)</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>l1</span> <span class=o>=</span> <span class=n>loop</span><span class=p>(</span><span class=n>loops</span><span class=o>/</span><span class=n>VE4</span><span class=o>-</span><span class=mf>24.</span><span class=n>wav</span><span class=p>)</span>
+<span class=n>let</span> <span class=n>k1</span> <span class=o>=</span> <span class=n>sample</span><span class=p>(</span><span class=n>kicks</span><span class=o>/</span><span class=n>kick8</span><span class=p>.</span><span class=n>aif</span><span class=p>)</span>
+<span class=n>addFx</span><span class=p>(</span><span class=n>l1</span><span class=p>,</span> <span class=s>&#34;sidechain&#34;</span><span class=p>,</span> <span class=n>k1</span><span class=p>)</span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="set-volume-of-a-track">Set volume of a track</h2>
+<h2 id=set-volume-of-a-track>Set volume of a track</h2>
 <p>You can set the volume to a track with a value range of <code>[0.0, 1.0]</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">loop</span><span class="p">(</span><span class="n">loops</span><span class="o">/</span><span class="n">VE4</span><span class="o">-</span><span class="mf">24.</span><span class="n">wav</span><span class="p">)</span>
-<span class="n">vol</span> <span class="n">l1</span> <span class="mf">0.4</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>l1</span> <span class=o>=</span> <span class=n>loop</span><span class=p>(</span><span class=n>loops</span><span class=o>/</span><span class=n>VE4</span><span class=o>-</span><span class=mf>24.</span><span class=n>wav</span><span class=p>)</span>
+<span class=n>vol</span> <span class=n>l1</span> <span class=mf>0.4</span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="modify-the-looper-loops">Modify the looper loops</h2>
+<h2 id=modify-the-looper-loops>Modify the looper loops</h2>
 <p>In the examples above I have used the looper using the <code>loop</code> command.</p>
 <p>The looper allows some modifications:</p>
 <ul>
@@ -380,18 +337,18 @@ $ Boom! make some noise...
 <li><code>selection_mode</code></li>
 <li><code>env_mode</code></li>
 </ul>
-<h2 id="the-moog-minisynth">The Moog MiniSynth</h2>
-<p>There is this minisynth included callled <code>moog</code>. And there are a bunch of presets already included in the file <a href="https://github.com/sideb0ard/SoundB0ard/blob/master/settings/moogpresets.dat">moogpresets.dat</a> which can be loaded using <code>loadPreset</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<h2 id=the-moog-minisynth>The Moog MiniSynth</h2>
+<p>There is this minisynth included callled <code>moog</code>. And there are a bunch of presets already included in the file <a href=https://github.com/sideb0ard/SoundB0ard/blob/master/settings/moogpresets.dat>moogpresets.dat</a> which can be loaded using <code>loadPreset</code>:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
-<span class="n">loadPreset</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="s">&#34;pacman&#34;</span><span class="p">)</span>
-<span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;m1 m1 m1&#34;</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>m1</span> <span class=o>=</span> <span class=n>moog</span><span class=p>()</span>
+<span class=n>loadPreset</span><span class=p>(</span><span class=n>m1</span><span class=p>,</span> <span class=s>&#34;pacman&#34;</span><span class=p>)</span>
+<span class=n>p1</span> <span class=err>$</span> <span class=s>&#34;m1 m1 m1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Presets include e.g.</p>
@@ -403,55 +360,50 @@ $ Boom! make some noise...
 </ul>
 <p>For a full list take a look on the <code>.dat</code> file.</p>
 <p>with <code>#</code> instead of <code>$</code> you can send MIDI notes to the device:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">mo</span> <span class="o">=</span> <span class="n">moog</span><span class="p">()</span>
-<span class="n">loadPreset</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span> <span class="s">&#34;remotev&#34;</span><span class="p">)</span>
-<span class="n">p1</span> <span class="err">#</span> <span class="s">&#34;c3 d4 c3 a3&#34;</span> <span class="n">mo</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>mo</span> <span class=o>=</span> <span class=n>moog</span><span class=p>()</span>
+<span class=n>loadPreset</span><span class=p>(</span><span class=n>mo</span><span class=p>,</span> <span class=s>&#34;remotev&#34;</span><span class=p>)</span>
+<span class=n>p1</span> <span class=err>#</span> <span class=s>&#34;c3 d4 c3 a3&#34;</span> <span class=n>mo</span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="pattern">Pattern</h2>
+<h2 id=pattern>Pattern</h2>
 <p>This is currently the most confusing part on my side.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">k1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">kicks</span><span class="o">/</span><span class="n">kick8</span><span class="p">.</span><span class="n">aif</span><span class="p">)</span>
-<span class="n">p1</span> <span class="err">$</span> <span class="s">&#34;k1 k1 k1&#34;</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=n>let</span> <span class=n>k1</span> <span class=o>=</span> <span class=n>sample</span><span class=p>(</span><span class=n>kicks</span><span class=o>/</span><span class=n>kick8</span><span class=p>.</span><span class=n>aif</span><span class=p>)</span>
+<span class=n>p1</span> <span class=err>$</span> <span class=s>&#34;k1 k1 k1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 <ul>
 <li><code>[]</code> : pattern group</li>
-<li><code>&lt;&gt;</code> : multi step pattern</li>
-<li><code>()</code> : setting <a href="http://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf">euclidian</a> rhythm e.g. (<code>(3,8)</code>, <code>(5,13)</code>)</li>
+<li><code>&lt;></code> : multi step pattern</li>
+<li><code>()</code> : setting <a href=http://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf>euclidian</a> rhythm e.g. (<code>(3,8)</code>, <code>(5,13)</code>)</li>
 <li><code>$</code> : prepending this allows you to access values from the <code>[Env]</code> environment &ndash; like your loaded samples etc.</li>
 <li><code>#</code> : this allows you to work with values and assign it to a target (e.g. sending MIDI notes to a synth)</li>
 </ul>
 <hr>
-<p>&hellip;only the beginning. Will continue to add more infos when I am ready :)</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
+<p>&mldr;only the beginning. Will continue to add more infos when I am ready :)</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-    </div>
-  </div>
-
-  <footer>
-    <footer class="has-text-centered">
-<img src="/cat.gif">
+</div>
+</div>
+<footer>
+<footer class=has-text-centered>
+<img src=/cat.gif>
 </footer>
-  </footer>
-
+</footer>
 </body>
-
 </html>

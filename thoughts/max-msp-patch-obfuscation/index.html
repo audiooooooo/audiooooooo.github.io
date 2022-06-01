@@ -1,246 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html><html lang=en>
 <head>
-  <meta charset="utf-8">
-  <title>Frustration through obfuscation in Max/MSP // once i had a cat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  
-  <meta name="keywords" content="max/msp, cycling 74, obfuscate">
-  
-  <meta property="og:title" content="Frustration through obfuscation in Max/MSP">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/">
-  <meta property="og:description" content="">
-  <meta property="og:site_name" content="once I had a cat">
-  <meta name="msvalidate.01" content="B0A4A9FBBDCFEB257EB993160FA09FBF" />
-  <meta name="google-site-verification" content="REgG4I-DhlS9raB6978SUzzOILfVU4j2HcReGanV0jM" />
-  
-  
-  <meta property="og:image" content="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/beauty-of-step-divider-max-patch.png">
-  
-  
-  <meta name="twitter:site" content="@onceihadacat">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-
-  <link rel="alternate" type="application/rss&#43;xml" href="https://onceihadacat.com/index.xml">
-  
-
-  
-  <link rel="stylesheet" href="https://onceihadacat.com/css/main.min.98d9464674543695799f7b3e42799af7501fbb9676c7a31d8e120b09808df08d.css">
-  <link rel="canonical" href="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-
+<meta charset=utf-8>
+<title>Frustration through obfuscation in Max/MSP // once i had a cat</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content>
+<meta name=keywords content="max/msp,cycling 74,obfuscate">
+<meta property="og:title" content="Frustration through obfuscation in Max/MSP">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/">
+<meta property="og:description" content>
+<meta property="og:site_name" content="once I had a cat">
+<meta name=msvalidate.01 content="B0A4A9FBBDCFEB257EB993160FA09FBF">
+<meta name=google-site-verification content="REgG4I-DhlS9raB6978SUzzOILfVU4j2HcReGanV0jM">
+<meta property="og:image" content="https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/beauty-of-step-divider-max-patch.png">
+<meta name=twitter:site content="@onceihadacat">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css>
+<link rel=alternate type=application/rss+xml href=https://onceihadacat.com/index.xml>
+<link rel=stylesheet href=https://onceihadacat.com/css/main.min.98d9464674543695799f7b3e42799af7501fbb9676c7a31d8e120b09808df08d.css>
+<link rel=canonical href=https://onceihadacat.com/thoughts/max-msp-patch-obfuscation/>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
 </head>
-
 <body>
-
-  <header>
-    <div class="columns is-centered">
-  <div class="column is-half has-text-centered mt-4">
-    <figure class="image is-128x128 is-inline-block">
-      <a href="/"><img class="is-rounded" src="/oihac.png" alt="Picture of a smooth cat" title="Once I had a cat"></a>
-    </figure>
-  </div>
+<header>
+<div class="columns is-centered">
+<div class="column is-half has-text-centered mt-4">
+<figure class="image is-128x128 is-inline-block">
+<a href=/><img class=is-rounded src=/oihac.png alt="Picture of a smooth cat" title="Once I had a cat"></a>
+</figure>
 </div>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div id="navbarBasicExample" class="navbar-brand">
-      <a class="navbar-item center" href="/thoughts">
-        THOUGHTS 🌱
+</div>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div id=navbarBasicExample class=navbar-brand>
+<a class="navbar-item center" href=/thoughts>
+THOUGHTS 🌱
+</a>
+<a class="navbar-item center" href=/packs>
+SOUNDS & PACKS 🔉
       </a>
-      <a class="navbar-item center" href="/packs">
-        SOUNDS & PACKS 🔉
-      </a>
-
-  </div>
+</div>
 </nav>
-  </header>
-
-  <div id="main" class="oihac-main">
-    <div class="container is-fluid">
-      
+</header>
+<div id=main class=oihac-main>
+<div class="container is-fluid">
 <section>
-  <div class="container">
-    <div class="top-breadcrumb">
-  <nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
-    <ul>
-      
-
-
-
-
-
-
+<div class=container>
+<div class=top-breadcrumb>
+<nav class="breadcrumb has-bullet-separator is-centered" aria-label=breadcrumbs>
+<ul>
 <li>
-  <a href="https://onceihadacat.com/">once I had a cat</a>
+<a href=https://onceihadacat.com/>once I had a cat</a>
 </li>
-
-
-
-
 <li>
-  <a href="https://onceihadacat.com/thoughts/">thoughts</a>
+<a href=https://onceihadacat.com/thoughts/>thoughts</a>
 </li>
-
-
-
-
-<li class="is-active">
-  <a href="#" aria-current="page">Frustration through obfuscation in Max/MSP</a>
+<li class=is-active>
+<a href=# aria-current=page>Frustration through obfuscation in Max/MSP</a>
 </li>
-
-
-    </ul>
-  </nav>
-</div>
-
-    <div class="columns">
-      <div class="column is-one-third">
-        <div class='article-sidebar'>
-
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#open-and-visual">Open and visual</a></li>
-        <li><a href="#patch-obfuscation">Patch Obfuscation</a></li>
-        <li><a href="#simon-says-everybody-avoid-distancing-and-jump-on-each-other">Simon says: &ldquo;Everybody avoid distancing and jump on each other!&rdquo;</a></li>
-        <li><a href="#order-matters">Order matters</a></li>
-        <li><a href="#put-them-back">Put them back</a></li>
-        <li><a href="#trust">Trust</a></li>
-      </ul>
-    </li>
-  </ul>
+</ul>
 </nav>
-
 </div>
-
-      </div>
-      <div class="column">
-        <div id="article-body" class="col-sm-9 col-sm-push-3 doc">
-          <h1 itemprop="headline" class="has-text-centered is-size-2-mobile">Frustration through obfuscation in Max/MSP</h1>
-
-
-          <p>ooh, aah &hellip; what a beauty, what an elegance.</p>
-<p><img src="beauty-of-step-divider-max-patch.png" alt="The Max patch of the Step Divider by Sonic Faction"></p>
-<p>These are often my first thoughts, when I take a look onto a nicely structured Max/MSP patch. In the above case its the <em>Step Divider</em> patch from the <a href="https://www.ableton.com/en/packs/probability-pack/">Probability Pack</a> of <a href="https://www.facebook.com/SonicFaction/">Sonic Faction</a>.</p>
+<div class=columns>
+<div class="column is-one-third">
+<div class=article-sidebar>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#open-and-visual>Open and visual</a></li>
+<li><a href=#patch-obfuscation>Patch Obfuscation</a></li>
+<li><a href=#simon-says-everybody-avoid-distancing-and-jump-on-each-other>Simon says: &ldquo;Everybody avoid distancing and jump on each other!&rdquo;</a></li>
+<li><a href=#order-matters>Order matters</a></li>
+<li><a href=#put-them-back>Put them back</a></li>
+<li><a href=#trust>Trust</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class=column>
+<div id=article-body class="col-sm-9 col-sm-push-3 doc">
+<h1 itemprop=headline class="has-text-centered is-size-2-mobile">Frustration through obfuscation in Max/MSP</h1>
+<p>ooh, aah &mldr; what a beauty, what an elegance.</p>
+<p><img src=beauty-of-step-divider-max-patch.png alt="The Max patch of the Step Divider by Sonic Faction"></p>
+<p>These are often my first thoughts, when I take a look onto a nicely structured Max/MSP patch. In the above case its the <em>Step Divider</em> patch from the <a href=https://www.ableton.com/en/packs/probability-pack/>Probability Pack</a> of <a href=https://www.facebook.com/SonicFaction/>Sonic Faction</a>.</p>
 <p>But what if your patching view looks like this:</p>
-<p><img src="unfriendly-patch.png" alt="Not to friendly patching view"></p>
-<h2 id="open-and-visual">Open and visual</h2>
+<p><img src=unfriendly-patch.png alt="Not to friendly patching view"></p>
+<h2 id=open-and-visual>Open and visual</h2>
 <p>Lately I really felt in love with Max/MSP. Especially its openness attracts me. You can learn and see how things are done and can even tweak existing patches/devices.</p>
 <p>And with <em>Max for Live</em> you can have it all smoothly integrated into Ableton Live.</p>
 <p>And it&rsquo;s visual. This allows grouping of related objects together and see their connections to get a even better understanding.</p>
 <p>Thats why I often prefer Max4Live devices in Ableton to normal Plugins. They allow me to get this deeper understanding. And to get this I am of course also willing to pay money. Be it over the <a href="https://www.ableton.com/en/packs/#?item_type=max_for_live">Ableton market place for Max for Live devices</a> or services like Gumroad.</p>
 <p>But there was a disappointment lately. 😿</p>
-<h2 id="patch-obfuscation">Patch Obfuscation</h2>
+<h2 id=patch-obfuscation>Patch Obfuscation</h2>
 <p>Code obfuscation. I don&rsquo;t like it. Unthinkable in open source projects, where your code commits are some kind of &ldquo;business card&rdquo; of yourself and your skills. You want a code that is easy to understand, easy to test, easy to maintain and easy to extend by other people.</p>
 <p>And for me Max/MSP patches feel open source like. When I see patches which are structured and nicely arranged I gain trust in it&rsquo;s developer/creator. And I love to use these patches, because they feel and look stable and nice.</p>
 <p>But not this time. I paid couple of Euros to download a sequencer Max4Live device from Gumroad. It looked awesome in the presentation view, but when I unlocked it and opened the patching view all my anticipation &mdash; was gone.</p>
 <p>It looked like crap. As you can see in the above screenshot.</p>
 <p>First I thought its a bug in Max, but when I opened the <code>amxd</code> file and took a look on the JSON objects I saw that lots of <code>patching_rect</code> properties contain the same position information.</p>
-<p>🙀 Everything was overlapping &hellip; on purpose.</p>
-<h2 id="simon-says-everybody-avoid-distancing-and-jump-on-each-other">Simon says: &ldquo;Everybody avoid distancing and jump on each other!&rdquo;</h2>
+<p>🙀 Everything was overlapping &mldr; on purpose.</p>
+<h2 id=simon-says-everybody-avoid-distancing-and-jump-on-each-other>Simon says: &ldquo;Everybody avoid distancing and jump on each other!&rdquo;</h2>
 <p>All the semantic which is normaly stored in the positioning of the objects was gone. One of the biggest benefits of Max. What a pity.</p>
-<p>When I searched the holy web for information about this, I found <a href="https://cycling74.com/forums/stand-alone-copy-protection">this old thread in the Cycling74 forum</a> and I saw that there is this obfuscation method of sending every object a re-positioning message.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<p>When I searched the holy web for information about this, I found <a href=https://cycling74.com/forums/stand-alone-copy-protection>this old thread in the Cycling74 forum</a> and I saw that there is this obfuscation method of sending every object a re-positioning message.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=k>this</span><span class=p>.</span><span class=nx>patcher</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>eachobj</span><span class=p>);</span>
 
-<span class="kd">function</span> <span class="nx">eachobj</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">maxclass</span> <span class="o">!=</span> <span class="s2">&#34;patcher&#34;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">x</span><span class="p">.</span><span class="nx">message</span><span class="p">(</span><span class="s2">&#34;sendbox&#34;</span><span class="p">,</span><span class="s2">&#34;patching_position&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
-    <span class="p">}</span>            
-    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class=kd>function</span> <span class=nx>eachobj</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>x</span><span class=p>.</span><span class=nx>maxclass</span> <span class=o>!=</span> <span class=s2>&#34;patcher&#34;</span><span class=p>)</span> <span class=p>{</span>
+        <span class=nx>x</span><span class=p>.</span><span class=nx>message</span><span class=p>(</span><span class=s2>&#34;sendbox&#34;</span><span class=p>,</span><span class=s2>&#34;patching_position&#34;</span><span class=p>,</span><span class=mi>100</span><span class=p>,</span><span class=mi>100</span><span class=p>);</span>
+    <span class=p>}</span>            
+    <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
+<span class=p>}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Oh man.</p>
-<h2 id="order-matters">Order matters</h2>
+<h2 id=order-matters>Order matters</h2>
 <p>Right-to-Left order is important in Max.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/EecJT72wDco" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/EecJT72wDco style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Anyway it is not best practice to purely count on the position of objects in the view to have the correct order of signal flow.</p>
 <p>But if you do the above code will obsiously destroy of the correct signal flow.</p>
-<p>You should always use the <a href="https://docs.cycling74.com/max8/refpages/trigger">trigger object</a> instead to keep the correct flow also in case of re-arrangement of the objects.</p>
-<h2 id="put-them-back">Put them back</h2>
+<p>You should always use the <a href=https://docs.cycling74.com/max8/refpages/trigger>trigger object</a> instead to keep the correct flow also in case of re-arrangement of the objects.</p>
+<h2 id=put-them-back>Put them back</h2>
 <p>So what can you do to re-arrange the objects perfectly back if you have been provided such a obfuscated patch?</p>
 <p>Of course you could manually move everything around. This would take maybe hours depending on the size of the patch.</p>
 <p>A completely automation of restore the original arrangement is not possible, because all the original positions are not stored in the patch file.</p>
-<p>One possible helper and starting point could be the above mentioned <a href="https://docs.cycling74.com/max8/vignettes/jspatcherobject">patcher object</a>. Instead of putting all objects together we can spread them some randomly over the canvas.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<p>One possible helper and starting point could be the above mentioned <a href=https://docs.cycling74.com/max8/vignettes/jspatcherobject>patcher object</a>. Instead of putting all objects together we can spread them some randomly over the canvas.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">patcher</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">eachobj</span><span class="p">);</span>
-<span class="kd">function</span> <span class="nx">eachobj</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">x_pos</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">y_pos</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">800</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="nx">x</span><span class="p">.</span><span class="nx">message</span><span class="p">(</span><span class="s2">&#34;sendbox&#34;</span><span class="p">,</span><span class="s2">&#34;patching_rect&#34;</span><span class="p">,</span><span class="nx">x_pos</span><span class="p">,</span> <span class="nx">y_pos</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=k>this</span><span class=p>.</span><span class=nx>patcher</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>eachobj</span><span class=p>);</span>
+<span class=kd>function</span> <span class=nx>eachobj</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span>
+<span class=p>{</span>
+    <span class=kd>var</span> <span class=nx>x_pos</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=mi>1000</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+    <span class=kd>var</span> <span class=nx>y_pos</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=mi>800</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+    <span class=nx>x</span><span class=p>.</span><span class=nx>message</span><span class=p>(</span><span class=s2>&#34;sendbox&#34;</span><span class=p>,</span><span class=s2>&#34;patching_rect&#34;</span><span class=p>,</span><span class=nx>x_pos</span><span class=p>,</span> <span class=nx>y_pos</span><span class=p>,</span> <span class=mi>190</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span>
+    <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
+<span class=p>}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>In this case we resize all objects to width <code>190</code> and height <code>30</code> and place them on the canvas with <code>x</code> position beween <code>1</code> and <code>1000</code> and <code>y</code> position between <code>1</code> and <code>800</code>.</p>
 <p>Not perfect, but at least we save some time to unravel the obfuscated objects.</p>
 <p>So execute the above Javascript code in a patch you can use the <code>js</code> object, send it the message <code>open</code> and edit your code here. When saved its immediately executed on the patch.</p>
 <p>Be aware: Changes done with Javascript can not be undone.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/5TORRaN7nU0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/5TORRaN7nU0 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Not optimal, but maybe a start.</p>
-<h2 id="trust">Trust</h2>
+<h2 id=trust>Trust</h2>
 <p>I understand the intention of the developer who obfuscated this patch. He or her wants to &ldquo;protect&rdquo; their patch, their ideas or whatsoever. But in the end I think Max is such a great tool, because you can share your ideas etc.</p>
 <p>And if you want to protect all the code, you can use other languages like C++ to create a normal VST plugin.</p>
 <p>When I pay for a Max for Live device or a standard Max patch, I don&rsquo;t like the idea of just getting a nice presentation mode view, but a messy patch mode view. I am interested in this patch and its guts. 😻</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-    </div>
-  </div>
-
-  <footer>
-    <footer class="has-text-centered">
-<img src="/cat.gif">
+</div>
+</div>
+<footer>
+<footer class=has-text-centered>
+<img src=/cat.gif>
 </footer>
-  </footer>
-
+</footer>
 </body>
-
 </html>
