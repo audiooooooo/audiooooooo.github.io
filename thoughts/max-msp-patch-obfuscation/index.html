@@ -54,15 +54,48 @@
 </div>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" class="navbar-brand">
-      <a class="navbar-item center" href="/thoughts">
-        THOUGHTS 🌱
-      </a>
-      <a class="navbar-item center" href="/packs">
-        SOUNDS & PACKS 🔉
-      </a>
-
+    <a class="navbar-item center" href="/software">
+      SOFTWARE & APPS 💾
+    </a>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="navMenu">
+    <a class="navbar-item center" href="/packs">
+      SOUNDS & PACKS 🔉
+    </a>
+    <a class="navbar-item center" href="/thoughts">
+      THOUGHTS 🌱
+    </a>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+
+        
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+
+  });
+</script>
   </header>
 
   <div id="main" class="oihac-main">
@@ -128,7 +161,6 @@
       <div class="column">
         <div id="article-body" class="col-sm-9 col-sm-push-3 doc">
           <h1 itemprop="headline" class="has-text-centered is-size-2-mobile">Frustration through obfuscation in Max/MSP</h1>
-
 
           <p>ooh, aah &hellip; what a beauty, what an elegance.</p>
 <p><img src="beauty-of-step-divider-max-patch.png" alt="The Max patch of the Step Divider by Sonic Faction"></p>
@@ -226,6 +258,12 @@
 <p>And if you want to protect all the code, you can use other languages like C++ to create a normal VST plugin.</p>
 <p>When I pay for a Max for Live device or a standard Max patch, I don&rsquo;t like the idea of just getting a nice presentation mode view, but a messy patch mode view. I am interested in this patch and its guts. 😻</p>
 
+
+          <hr>
+          <div class="has-text-centered is-size-5-mobile">
+            I started May 7, 2020 to work on
+            this great post and last updated it on August 13, 2022.
+          </div>
         </div>
       </div>
     </div>
@@ -237,7 +275,13 @@
 
   <footer>
     <footer class="has-text-centered">
-<img src="/cat.gif">
+    <img src="/cat.gif">
+    <p>
+        <strong>once i had a cat</strong> is my snuggery to write down some thoughts, create sample packs and some
+        software.<br/>
+        Read the <a href="/blabla/imprint">imprint</a> or <a href="/blabla/privacy">privact statement</a> if you want to know more
+        details.
+    </p>
 </footer>
   </footer>
 

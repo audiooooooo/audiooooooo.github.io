@@ -54,15 +54,48 @@
 </div>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" class="navbar-brand">
-      <a class="navbar-item center" href="/thoughts">
-        THOUGHTS 🌱
-      </a>
-      <a class="navbar-item center" href="/packs">
-        SOUNDS & PACKS 🔉
-      </a>
-
+    <a class="navbar-item center" href="/software">
+      SOFTWARE & APPS 💾
+    </a>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="navMenu">
+    <a class="navbar-item center" href="/packs">
+      SOUNDS & PACKS 🔉
+    </a>
+    <a class="navbar-item center" href="/thoughts">
+      THOUGHTS 🌱
+    </a>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+
+        
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+
+  });
+</script>
   </header>
 
   <div id="main" class="oihac-main">
@@ -126,7 +159,6 @@
         <div id="article-body" class="col-sm-9 col-sm-push-3 doc">
           <h1 itemprop="headline" class="has-text-centered is-size-2-mobile">Upload custom oscillators and effects</h1>
 
-
           <p>KORG opened their multi-engine to develop custom oscillators and effects. To upload them you can use their tool Sound Librarian.</p>
 <h2 id="sound-librarian">Sound Librarian</h2>
 <p>KORG provides the users with a small app call Sound Librarian to manage the programs on the minilogue xd and prologue respectively. It is available for Mac and Windows:</p>
@@ -148,6 +180,12 @@
 <h2 id="video-how-to-install-an-user-oscillator-on-the-minilogue-xd">Video: How to install an user oscillator on the minilogue xd</h2>
 <p><em>coming soon</em></p>
 
+
+          <hr>
+          <div class="has-text-centered is-size-5-mobile">
+            I started May 1, 2019 to work on
+            this great post and last updated it on August 13, 2022.
+          </div>
         </div>
       </div>
     </div>
@@ -159,7 +197,13 @@
 
   <footer>
     <footer class="has-text-centered">
-<img src="/cat.gif">
+    <img src="/cat.gif">
+    <p>
+        <strong>once i had a cat</strong> is my snuggery to write down some thoughts, create sample packs and some
+        software.<br/>
+        Read the <a href="/blabla/imprint">imprint</a> or <a href="/blabla/privacy">privact statement</a> if you want to know more
+        details.
+    </p>
 </footer>
   </footer>
 
